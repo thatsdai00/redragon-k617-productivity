@@ -155,7 +155,7 @@
           open the control panel. Double-click and go.
         </p>
         <div class="actions">
-          <a class="btn btn-primary" id="dl" href="https://github.com/">Download on GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/thatsdai00/redragon-k617-productivity">Download on GitHub</a>
           <a class="btn btn-ghost" href="https://thatsdai.pages.dev">Open control panel</a>
         </div>
       </header>
@@ -194,18 +194,8 @@
 
       <footer>
         Open source · MIT ·
-        <a id="repo" href="https://github.com/">GitHub repository</a>
+        <a href="https://github.com/thatsdai00/redragon-k617-productivity">GitHub repository</a>
       </footer>
     </div>
-    <script>
-      // After the repo exists, these point at the real GitHub URL via Pages base.
-      const guess = location.hostname.endsWith("github.io")
-        ? `https://github.com/${location.pathname.split("/").filter(Boolean)[0] || ""}/${location.pathname.split("/").filter(Boolean)[1] || ""}`.replace(/\/$/, "")
-        : null;
-      if (guess && guess !== "https://github.com/") {
-        document.getElementById("dl").href = guess;
-        document.getElementById("repo").href = guess;
-      }
-    </script>
   </body>
 </html>

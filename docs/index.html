@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redragon K617 — Productivity Kit</title>
+    <meta
+      name="description"
+      content="No-install Windows toolkit to flash and control Redragon K617 Fizz firmware."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c0c0e;
+        --paper: #f2efe8;
+        --steel: #1a1b1f;
+        --red: #e10600;
+        --red-dim: #9a0400;
+        --mute: #6b6860;
+        --line: rgba(12, 12, 14, 0.12);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "DM Sans", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 600px at 80% -10%, rgba(225, 6, 0, 0.18), transparent 55%),
+          linear-gradient(165deg, #ebe6dc 0%, var(--paper) 45%, #e4dfd4 100%);
+        min-height: 100vh;
+      }
+      .wrap {
+        width: min(920px, calc(100% - 2.5rem));
+        margin: 0 auto;
+        padding: 2.5rem 0 4rem;
+      }
+      header {
+        display: grid;
+        gap: 1.25rem;
+        padding: 2.5rem 0 2rem;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(3.2rem, 9vw, 5.5rem);
+        letter-spacing: 0.04em;
+        line-height: 0.9;
+        margin: 0;
+      }
+      .brand span { color: var(--red); }
+      .lede {
+        max-width: 34rem;
+        font-size: 1.125rem;
+        line-height: 1.55;
+        color: var(--mute);
+        margin: 0;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      a.btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.85rem 1.25rem;
+        border-radius: 2px;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
+      a.btn:hover { transform: translateY(-1px); }
+      a.btn-primary {
+        background: var(--red);
+        color: #fff;
+      }
+      a.btn-primary:hover { background: var(--red-dim); }
+      a.btn-ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--line);
+      }
+      section {
+        padding: 2.25rem 0;
+        border-bottom: 1px solid var(--line);
+      }
+      h2 {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.85rem;
+        letter-spacing: 0.06em;
+        margin: 0 0 1rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.45);
+        border: 1px solid var(--line);
+        padding: 1.1rem 1.15rem;
+        border-radius: 2px;
+      }
+      .card strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--mute);
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      ol.steps {
+        margin: 0;
+        padding-left: 1.2rem;
+        color: var(--mute);
+        line-height: 1.7;
+      }
+      code {
+        font-family: ui-monospace, "Cascadia Code", monospace;
+        font-size: 0.86em;
+        background: rgba(12, 12, 14, 0.06);
+        padding: 0.1em 0.35em;
+        border-radius: 2px;
+      }
+      footer {
+        padding-top: 1.75rem;
+        color: var(--mute);
+        font-size: 0.9rem;
+      }
+      footer a { color: var(--ink); }
+      @media (prefers-reduced-motion: reduce) {
+        a.btn { transition: none; }
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1 class="brand">REDRAGON <span>K617</span></h1>
+        <p class="lede">
+          No-install Windows kit: back up stock firmware, flash custom lights firmware,
+          open the control panel. Double-click and go.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" id="dl" href="https://github.com/">Download on GitHub</a>
+          <a class="btn btn-ghost" href="https://thatsdai.pages.dev">Open control panel</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>What it does</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>Backup</strong>
+            <p>Read your original firmware to <code>benim-stok-yedek.hex</code> before anything else.</p>
+          </div>
+          <div class="card">
+            <strong>Flash custom</strong>
+            <p>Write the bundled custom HEX with a portable SinoWealth tool — no installer.</p>
+          </div>
+          <div class="card">
+            <strong>Restore</strong>
+            <p>Put your own backup back if you want factory firmware again.</p>
+          </div>
+          <div class="card">
+            <strong>TR / EN + dark UI</strong>
+            <p>WinForms panel in Turkish or English. Language sticks between runs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>How to use</h2>
+        <ol class="steps">
+          <li>Plug the K617 in over USB.</li>
+          <li>Run <code>Redragon-K617.cmd</code>.</li>
+          <li>Backup first, then install custom if you want.</li>
+          <li>Open the control panel for RGB / idle / Snap Tap.</li>
+        </ol>
+      </section>
+
+      <footer>
+        Open source · MIT ·
+        <a id="repo" href="https://github.com/">GitHub repository</a>
+      </footer>
+    </div>
+    <script>
+      // After the repo exists, these point at the real GitHub URL via Pages base.
+      const guess = location.hostname.endsWith("github.io")
+        ? `https://github.com/${location.pathname.split("/").filter(Boolean)[0] || ""}/${location.pathname.split("/").filter(Boolean)[1] || ""}`.replace(/\/$/, "")
+        : null;
+      if (guess && guess !== "https://github.com/") {
+        document.getElementById("dl").href = guess;
+        document.getElementById("repo").href = guess;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+========================================
+  Redragon K617 — Easy toolkit
+========================================
+
+NO INSTALL. Windows + USB is enough.
+
+Double-click: Redragon-K617.cmd
+
+Includes:
+  tools\sinowisp.exe
+  firmware\redragon-k617.hex   custom
+
+Control panel:
+  https://thatsdai.pages.dev
+
+Back up original firmware BEFORE custom install.
+Restore stock only works from YOUR backup.
+
+Redragon K617
+========================================

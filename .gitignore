@@ -1,0 +1,6 @@
+# Local / user-generated
+ui-lang.txt
+firmware/benim-stok-yedek.hex
+*.log
+Thumbs.db
+.DS_Store

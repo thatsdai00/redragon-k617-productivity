@@ -1,0 +1,3 @@
+﻿Redragon K617 firmware v54
+USB strings: Redragon / Redragon K617
+Built: 2026-07-17

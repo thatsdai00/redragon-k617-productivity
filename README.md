@@ -25,6 +25,8 @@ ui.ps1              WinForms UI
 BENI-OKU.txt        short guide
 firmware/           custom HEX + version stamp
 tools/sinowisp.exe  portable SinoWealth flasher
+src/                firmware source (K617 + related)
+docs/               GitHub Pages landing
 ```
 
 ## Requirements

@@ -1,6 +1,7 @@
 # Local / user-generated
 ui-lang.txt
 firmware/benim-stok-yedek.hex
+.tools/
 *.log
 Thumbs.db
 .DS_Store
